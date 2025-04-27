@@ -17,15 +17,27 @@ public class GameEntry implements Serializable {
     private String entryDate;
     private String imageUrl;
 
+    @Lob
+    private String reviewText;
+
 
     public GameEntry() {}
 
-    public GameEntry(Long id, String name, String Platform, String finishStatus, String rating, String imageUrl) {
+    public GameEntry(Long id, String name, String Platform, String finishStatus, String rating, String imageUrl, String reviewText) {
         this.Name = name;
         this.Platform = Platform;
         this.finishStatus = finishStatus;
         this.Rating = rating;
         this.imageUrl = imageUrl;
+        this.reviewText = reviewText;
+    }
+
+    public String getReviewText() {
+        return reviewText;
+    }
+
+    public void setReviewText(String reviewText) {
+        this.reviewText = reviewText;
     }
 
     public Long getId() {
